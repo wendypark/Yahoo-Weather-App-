@@ -1,0 +1,144 @@
+
+<!--
+Beginning of Weather App
+
+Also requires files:
+	weather.css
+	weather.js
+-->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width"> 
+	<title>Weather App</title>
+	<link rel="stylesheet" type="text/css" href="weather.css">
+</head>
+
+
+<body>
+
+<main>
+	<div class="header">
+		<input id="zipbox" type="text" placeholder="  enter zip">
+		<button onclick="buttonAction()">submit</button>
+	</div>
+
+	<div id="weatherBox">
+		<p id="forecast"></p>
+	</div>
+
+	<div id="current">
+		<p id="city"></p>
+		<p id="region"></p>
+		<p id="temperature"></p>
+		<p id="text"></p>
+		<p id="wind"></p>
+		<p id="humidity"></p>
+	</div>
+
+	<div class="forecast">
+		<div id="box1">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box2">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box3">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box4">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box5">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box6">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box7">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box8">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box9">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+		<div id="box10">
+			<p class="day"></p>
+			<img class="images"></img>
+			<p class="text"></p>
+			<p class="high"></p>
+			<p class="low"></p>
+		</div>
+	</div>
+
+
+		<!--
+		<p id="day1_day"></p>
+		<p id="day1_high"></p>
+		<p id="day1_low"></p>
+		<p id="day1_text"></p>
+
+		<p id="day2_day"></p>
+		<p id="day2_high"></p>
+		<p id="day2_low"></p>
+		<p id="day2_text"></p>
+
+		<p id="day3_day"></p>
+		<p id="day3_high"></p>
+		<p id="day3_low"></p>
+		<p id="day3_text"></p>
+		-->
+	<div class="sliderbuttons">
+		<p class="first"> <button onclick="slider()"> < </button> previous forecasts </p>
+		<p class="second"> more forecasts <button onclick="slider()"> > </button> </p>
+	</div>
+</main>
+
+
+	<!-- contains callback function that is called when weather gets here from server --> 
+	<script src="weather.js"></script>
+
+	<!-- asks server to send weather -->
+	<script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='davis, ca')&format=json&callback=callbackFunction"></script>
+
+</body>
+</html>

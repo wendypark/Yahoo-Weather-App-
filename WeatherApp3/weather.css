@@ -1,0 +1,91 @@
+
+body {
+	background: linear-gradient(#2A95C9, #252B69); /* Standard syntax */
+	font-family: proxima-nova, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+	margin-top: 20px;
+}
+
+input { 
+	font-family: proxima-nova, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: large;
+	font-size: 15px;
+	background-color: #BEE0EE;
+	border-radius:20px; 
+	-moz-border-radius:20px; 
+	-webkit-border-radius:20px; 
+	border:none;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+button {
+	font-family: sans-serif;
+	color: white;
+	background-color: #0AB2ED;
+	font-size: 10px;
+	text-align: left;
+	border:none;
+	border-radius:10px; 
+	-moz-border-radius:10px; 
+	-webkit-border-radius:10px; 
+}
+
+.forecast div {
+	background-color: #4581AB;
+	display: flex;
+	flex-direction:column;
+	text-align: justify;
+	padding:15px;
+	margin-right:8px;
+	border-radius: 10px;
+
+}
+
+.forecast {
+	display: flex;
+	flex-direction:row;
+}
+
+.sliderbuttons {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.first {
+	float:left;
+	margin-right: 200px;
+}
+
+.second {
+	float:right;
+	margin-left: 200px;
+	
+}
+
+.sliderbuttons button {
+	background-color: #4581AB;
+	color:#25316B;
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+  	height: 30px;
+  	width: 30px;
+  	border-radius:50%;
+
+}
